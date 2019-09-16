@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class Status extends React.Component{
     render(){
         return(
-            <p className="main__status">"Mostrando {this.props.results} registros"</p>
+            <p className="main__status">"Mostrando {this.props.results.length} registros"</p>
         );
     }
 
@@ -12,6 +12,6 @@ class Status extends React.Component{
 
 Status.propTypes = {
   
-    results: PropTypes.number
+    results: PropTypes.array
 };
 export default Status;

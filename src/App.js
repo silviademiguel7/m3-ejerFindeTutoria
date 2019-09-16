@@ -25,20 +25,20 @@ class App extends React.Component {
     .then(response => response.json())
     .then(res=> {this.setState({datos: res.data ,
       date: res.date,
-      results : res.data.length}
+      }
       )})
   }
   handleOnChange(event){
-    const inputValue = event.currentTarget.value;
-    const results = this.state.datos.filter(dato =>dato.email.includes(this.state.inputText));
-    this.setState({inputText : inputValue , results: (results.length)});
+   const inputValue = event.currentTarget.value;
+  
+   this.setState({inputText : inputValue });
     
   }
 
   render() {
     return (
       <div className="app">
-        <Page datos={this.state.datos} handleOnChange={this.handleOnChange} inputText= {this.state.inputText} results={this.state.results} date={this.state.date}/>
+        <Page datos={this.state.datos} handleOnChange={this.handleOnChange} inputText= {this.state.inputText} date={this.state.date}/>
       </div>
     );
   }

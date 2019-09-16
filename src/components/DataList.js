@@ -7,8 +7,7 @@ class DataList extends React.Component {
         const datos = this.props.datos
         return (
             <ul className="main__cardlist">
-                {datos.filter(dato =>dato.email.includes(this.props.inputText))
-                .map((dato, index) => {
+               {datos.map((dato, index) => {
                     return (
                         <li key={index} className="cardlist__item">
                             <DataCard dato={dato}></DataCard>

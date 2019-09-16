@@ -13,7 +13,7 @@ class Filter extends React.Component{
 }
 
 Filter.propTypes = {
-    handleOnChange :PropTypes.func,
+   
     inputText: PropTypes.string,
 };
 export default Filter;

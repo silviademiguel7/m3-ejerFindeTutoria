@@ -9,7 +9,7 @@ class Footer extends React.Component {
         }
     }
     componentDidMount() {
-        this.clock = setInterval(this.getHour, 1000);
+        setInterval(()=> this.getHour(), 1000);
     }
     getHour() {
         const moment = new Date();
